@@ -1,0 +1,337 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LogicDirection Design System - Futuristic Green Tech Theme
+All colors MUST be HSL.
+*/
+
+@layer base {
+  /*
+    * This global rule is the key to removing the vertical gaps.
+    * It resets the default top and bottom margins on common block elements
+    * that might be causing the gaps between your sections.
+    */
+  h1, h2, h3, h4, h5, h6, p, ul, ol, dl, pre, address, blockquote, figure, hr, details, menu {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  :root {
+    /* Base Colors */
+    --background: 160 20% 85%; /* Darker greenish-gray */
+    --foreground: 160 30% 20%; /* Dark green for contrast */
+
+    /* Card & Surface Colors */
+    --card: 160 25% 92%; /* Light green for a softer, less bright card background */
+    --card-foreground: 160 30% 20%;
+
+    --popover: 160 25% 92%; /* Matching light green for popovers */
+    --popover-foreground: 160 30% 20%;
+
+    /* Brand Colors - Primary: Vibrant Green (Inspired by success green) */
+    --primary: 142 70% 45%; /* Bright, futuristic green */
+    --primary-foreground: 160 20% 95%; /* Light contrast for text */
+    --primary-glow: 142 70% 55%; /* Brighter green for glow effects */
+    
+    /* Secondary - Soft Mint Green (Complementary and calm) */
+    --secondary: 170 50% 80%; /* Light mint green */
+    --secondary-foreground: 160 30% 20%;
+
+    /* Muted & Subtle */
+    --muted: 160 15% 88%; /* Very light green-gray */
+    --muted-foreground: 160 10% 50%; /* Softer green-gray for muted text */
+
+    /* Accent - Deep Teal (Complementary to green) */
+    --accent: 180 40% 35%; /* Teal for contrast */
+    --accent-foreground: 160 20% 95%;
+
+    /* Status Colors */
+    --destructive: 0 84.2% 60.2%; /* Retained original red for consistency */
+    --destructive-foreground: 160 20% 95%;
+    
+    --success: 142 76% 36%; /* Retained original success green */
+    --success-foreground: 160 20% 95%;
+
+    /* Interactive Elements */
+    --border: 160 15% 85%; /* Soft green-gray border */
+    --input: 160 15% 85%;
+    --ring: 142 70% 45%; /* Primary green for ring */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 70% 45%), hsl(180 40% 35%)); /* Green to teal */
+    --gradient-hero: linear-gradient(180deg, hsl(160 20% 85%), hsl(160 15% 80%)); /* Aligned with background */
+    --gradient-card: linear-gradient(145deg, hsl(160 25% 92%), hsl(160 20% 88%)); /* Updated for light green card */
+    
+    /* Shadows & Effects */
+    --shadow-sm: 0 2px 4px hsl(160 30% 20% / 0.05);
+    --shadow-md: 0 4px 12px hsl(160 30% 20% / 0.1);
+    --shadow-lg: 0 8px 24px hsl(160 30% 20% / 0.15);
+    --shadow-glow: 0 0 30px hsl(142 70% 45% / 0.3);
+    --shadow-glow-purple: 0 0 30px hsl(180 40% 35% / 0.3); /* Teal glow instead of purple */
+
+    /* Glass Effect */
+    --glass-bg: hsl(160 25% 92% / 0.8); /* Light green with transparency for glass effect */
+    --glass-border: hsl(160 15% 85% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 160 20% 97%;
+    --sidebar-foreground: 160 30% 20%;
+    --sidebar-primary: 142 70% 45%;
+    --sidebar-primary-foreground: 160 20% 95%;
+    --sidebar-accent: 160 15% 90%;
+    --sidebar-accent-foreground: 160 30% 20%;
+    --sidebar-border: 160 15% 85%;
+    --sidebar-ring: 142 70% 45%;
+  }
+
+  .dark {
+    /* Base Colors - Dark Theme */
+    --background: 160 25% 5%; /* Darker green-gray */
+    --foreground: 160 20% 90%; /* Light green for contrast */
+
+    /* Card & Surface Colors */
+    --card: 160 25% 12%;
+    --card-foreground: 160 20% 90%;
+
+    --popover: 160 25% 12%;
+    --popover-foreground: 160 20% 90%;
+
+    /* Brand Colors - Maintain vibrant green */
+    --primary: 142 70% 50%; /* Slightly brighter green for dark mode */
+    --primary-foreground: 160 25% 10%;
+    --primary-glow: 142 70% 60%;
+
+    /* Secondary - Dark Mint Green */
+    --secondary: 170 45% 25%; /* Darker mint for contrast */
+    --secondary-foreground: 160 20% 90%;
+
+    /* Muted & Subtle */
+    --muted: 160 15% 15%;
+    --muted-foreground: 160 10% 60%;
+
+    /* Accent - Deep Teal */
+    --accent: 180 40% 45%; /* Brighter teal for dark mode */
+    --accent-foreground: 160 25% 10%;
+
+    /* Status Colors */
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 160 25% 10%;
+    
+    --success: 142 70% 45%;
+    --success-foreground: 160 25% 10%;
+
+    /* Interactive Elements */
+    --border: 160 20% 25%;
+    --input: 160 20% 25%;
+    --ring: 142 70% 50%;
+
+    /* Gradients - Dark Theme */
+    --gradient-primary: linear-gradient(135deg, hsl(142 70% 50%), hsl(180 40% 45%));
+    --gradient-hero: linear-gradient(180deg, hsl(160 25% 5%), hsl(160 20% 8%));
+    --gradient-card: linear-gradient(145deg, hsl(160 25% 12%), hsl(160 20% 15%));
+    
+    /* Shadows & Effects - Dark Theme */
+    --shadow-sm: 0 2px 4px hsl(160 30% 5% / 0.3);
+    --shadow-md: 0 4px 12px hsl(160 30% 5% / 0.4);
+    --shadow-lg: 0 8px 24px hsl(160 30% 5% / 0.5);
+    --shadow-glow: 0 0 30px hsl(142 70% 50% / 0.4);
+    --shadow-glow-purple: 0 0 30px hsl(180 40% 45% / 0.4); /* Teal glow */
+
+    /* Glass Effect - Dark */
+    --glass-bg: hsl(160 25% 12% / 0.8);
+    --glass-border: hsl(160 20% 25% / 0.3);
+
+    /* Sidebar */
+    --sidebar-background: 160 25% 12%;
+    --sidebar-foreground: 160 20% 90%;
+    --sidebar-primary: 142 70% 50%;
+    --sidebar-primary-foreground: 160 25% 10%;
+    --sidebar-accent: 160 15% 18%;
+    --sidebar-accent-foreground: 160 20% 90%;
+    --sidebar-border: 160 20% 25%;
+    --sidebar-ring: 142 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    transition: var(--transition-smooth);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Component Styles */
+@layer components {
+  /* Glass Morphism Effect */
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-purple {
+    box-shadow: var(--shadow-glow-purple); /* Now teal glow */
+  }
+
+  /* Floating Animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: -2s;
+  }
+
+  .float-delayed-2 {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: -4s;
+  }
+
+  /* Pulse Animation */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  /* Shimmer Effect */
+  .shimmer {
+    background: linear-gradient(90deg, 
+      transparent, 
+      hsl(var(--primary) / 0.1), 
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-right {
+    animation: fadeInRight 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+}
