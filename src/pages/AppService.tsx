@@ -390,7 +390,7 @@ const AppService = () => {
                     <p className="text-sm mb-6 leading-relaxed text-[hsl(var(--muted-foreground))]">
                       {tier.description}
                     </p>
-                   //
+                   
                   
                   </div>
 
