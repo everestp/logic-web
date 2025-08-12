@@ -268,12 +268,7 @@ const DigitalMarketingService = () => {
                 >
                   Get a Free Consultation
                 </a>
-                <a
-                  href="#tech-stack"
-                  className="inline-block px-8 py-4 bg-[hsl(var(--muted))] text-[hsl(var(--muted-foreground))] font-semibold rounded-full shadow-lg hover:bg-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--muted))] transition-colors duration-300 transform hover:scale-105"
-                >
-                  Explore Our Services
-                </a>
+                
               </div>
             </div>
 
