@@ -17,14 +17,14 @@ const actionSteps = [
     title: 'Discovery & Analysis',
     description: 'We dive deep into your business challenges, market landscape, and user needs to identify the core problems.',
     icon: <Search />,
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-green-500 to-emerald-500'
   },
   {
     step: '02',
     title: 'Strategy & Planning',
     description: 'Transform insights into actionable strategies with clear roadmaps and measurable objectives.',
     icon: <Lightbulb />,
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-green-500 to-emerald-500'
   },
   {
     step: '03',
@@ -38,21 +38,21 @@ const actionSteps = [
     title: 'Testing & Refinement',
     description: 'Rigorous testing ensures your solution performs flawlessly across all scenarios and devices.',
     icon: <TestTube />,
-    color: 'from-orange-500 to-red-500'
+     color: 'from-green-500 to-emerald-500'
   },
   {
     step: '05',
     title: 'Launch & Deploy',
     description: 'Strategic deployment with comprehensive monitoring to ensure smooth market entry.',
     icon: <Rocket />,
-    color: 'from-indigo-500 to-purple-500'
+    color: 'from-green-500 to-emerald-500'
   },
   {
     step: '06',
     title: 'Support & Scale',
     description: 'Ongoing optimization and scaling to adapt with your growing business needs.',
     icon: <HeadphonesIcon />,
-    color: 'from-teal-500 to-green-500'
+    color: 'from-green-500 to-emerald-500'
   }
 ];
 
